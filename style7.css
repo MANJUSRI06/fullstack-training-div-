@@ -1,0 +1,368 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: e0f7fa;
+  line-height: 1.6;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: lightseagreen;
+  padding: 12px 24px;
+  
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+  height: 45px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  padding: 10px 12px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  border-radius: 5px;
+}
+
+.nav-links a:hover {
+  background-color: #e0f7f5;
+  color: darkgreen;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: beige;
+  min-width: 160px;
+  list-style: none;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 10px 15px;
+  color: black;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #fdf0c9;
+  color: goldenrod;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.home,
+.about,
+.search,
+.contact {
+  display: none;
+}
+
+#show-home:checked  ~ .home, #show-about:checked ~ .about ,  #show-search:checked ~ .search , #show-contact:checked ~ .contact{
+  display: block;
+}
+
+
+.home {
+  padding-top: 120px; 
+  padding: 60px 20px;
+  background-color: #e0f7fa;
+  text-align: center;
+}
+
+.home-content h1 {
+  margin-bottom: 25px;
+  color: rgb(5, 3, 77);
+  font-size: 2rem;
+}
+
+.home-content p {
+  max-width: 850px;
+  margin: 0 auto;
+  text-align: left;
+  line-height: 1.8;
+  font-size: 1rem;
+  color: rgb(11, 11, 11);
+}
+
+
+#about {
+  padding: 60px 20px;
+  background-color: #e0f7fa;
+  text-align: center;
+}
+
+.about-content h1 {
+  font-size: 2.2rem;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.about-content h3 {
+  font-size: 1.5rem;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.about-content p {
+  max-width: 850px;
+  margin: 0 auto;
+  text-align: left;
+  line-height: 1.8;
+  font-size: 1rem;  
+}
+
+#about h2 {
+  font-size: 1.8rem;
+  margin: 30px 0 20px;
+  color: rgb(11, 11, 11);
+}
+
+.card {
+  display: inline-block;
+  width: 250px;
+  margin: 15px;
+  padding: 15px;
+  background-color: lightskyblue;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px;
+  vertical-align: top;
+
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  border-radius: 8px;
+  object-fit: cover;
+  
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: rgb(3, 52, 52);
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #302f2f;
+}
+
+#search-co{
+  width: 60%;
+  border-radius: 50px;
+  
+}
+
+#search {
+  padding: 60px 20px;
+  background-color: #e0f7fa;
+  text-align: center;
+}
+
+#search h1 {
+  font-size: 2.2rem;
+  color: #004d40;
+  margin-bottom: 20px;
+}
+
+#search h2 {
+  font-size: 1.5rem;
+  color: #00695c;
+  margin-bottom: 30px;
+}
+
+#search-co {
+  width: 60%;
+  padding: 12px 20px;
+  border: 2px solid #26a69a;
+  border-radius: 50px;
+  font-size: 1rem;
+  outline: none;
+  margin-bottom: 30px;
+  transition: 0.3s;
+}
+
+#search-co:focus {
+  border-color: #004d40;
+  box-shadow: 0 0 8px rgba(0, 77, 64, 0.2);
+}
+
+.search-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.search .card {
+  width: 260px;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.search .card:hover {
+  transform: translateY(-5px);
+}
+
+.search .card img {
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.search .card h3 {
+  margin-top: 12px;
+  color: #004d40;
+  font-size: 1.2rem;
+}
+
+.search .card p {
+  color: #333;
+  font-size: 0.95rem;
+  margin: 10px 0;
+}
+
+
+#popular {
+  padding: 60px 20px;
+  background-color: #e0f7fa;
+  text-align: center;
+}
+
+
+#popular h3 {
+  font-size: 1.3rem;
+  color: black;
+  margin-bottom: 40px;
+}
+
+.internship-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.popular .card {
+  width: 250px;
+  padding: 15px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.popular .card:hover {
+  transform: translateY(-6px);
+}
+
+.popular .card img {
+  height: 150px;
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.popular .card h3 {
+  margin-top: 12px;
+  color: #33691e;
+  font-size: 1.2rem;
+}
+
+.popular .card p {
+  color: black;
+  font-size: 0.95rem;
+  margin: 10px 0;
+}
+
+
+.contact {
+  padding: 20px;
+  text-align: center;
+  
+}
+
+.contact h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.contact-form input, .contact-form textarea {
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.contact-form button {
+  width: 80%;
+  padding: 10px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #0056b3;
+}
+
+footer {
+  background-color: lightseagreen;
+  padding: 10px;
+  text-align: center;
+  font-size: 1em;
+  margin-top: 20px;
+  
+}
+
+footer p {
+  margin: 0;
+  color: #333;
+}
+
+
+

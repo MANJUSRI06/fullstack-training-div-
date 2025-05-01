@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Navbar</title>
+  <link rel="stylesheet" href="style7.css" />
+</head>
+<body>
+  
+<input type="radio" name="page" id="show-home" checked hidden>
+<input type="radio" name="page" id="show-about" hidden>
+<input type="radio" name="page" id="show-search" hidden>
+<input type="radio" name="page" id="show-contact" hidden>
+
+  <nav class="navbar">
+    <div class="logo">
+      <img src="infilogo.jpeg" alt="logo" />
+    </div>
+    <ul class="nav-links">
+    
+        <li><label for="show-home">Home</label></li>
+        <li><label for="show-about">About</label></li>
+      
+      <li class="dropdown"><a href="#services">Services</a>
+        <ul class="dropdown-menu">
+          <li><a href="#course">Course</a></li>
+          <li><a href="#intern">Internship</a></li>
+          <li><a href="#compet">Competitions</a></li>
+        </ul>
+        
+      </li>
+      <li><label for="show-search">Search</label></li>
+      <li><label for="show-contact">Contact</label></li>
+    
+    </ul>
+  </nav>
+  
+  <section class="home" id="home">
+    <div class="home-content">
+      <h1>Welcome to LearnSphere - Unlock your Career!</h1>
+      <img src="learn.webp" alt="home">
+      
+      <p>
+        🏆 <strong>National-Level Competitions:</strong> Participate in curated quizzes, case studies, hackathons, 
+        and ideathons hosted by top institutes and companies.<br><br>
+        🎯 <strong>Skill Development:</strong> Upskill with industry-relevant courses, certifications, and challenges designed 
+        by professionals and domain experts.<br><br>
+        💼 <strong>Internships & Jobs:</strong> Explore exclusive internship and job opportunities across sectors from reputed 
+        companies.<br><br>
+        📚 <strong>Exam Preparation:</strong> Access mock tests, previous year question papers, and preparation tips for GATE, 
+        CAT, UPSC, and more.
+      </p>
+
+    </div>
+  </section>
+  
+  <section class="about" id="about">
+    <div class="About-content">
+      <h1>About Us!</h1>
+      <h3>Who We Are</h3>
+      <p>Welcome to LearnSphere - your trusted partner in knowledge and skill development!
+        We are a passionate team of educators, tech innovators, and lifelong learners committed to making education accessible, <br>
+        , and effective for everyone. Whether you're a student, a professional, or just curious to explore something new — you're in 
+        the right place.</p>
+    </div>
+
+    <div>
+      <h2>What we Offer</h2>
+    </div>
+
+      <div class="card">
+        <img src="expert.avif">
+        <h3>Teaching</h3>
+        <p>Expert-Led Courses across tech, business, art, and more</p>
+      </div>
+
+      <div class="card">
+        <img src="puzzle.avif">
+        <h3>Solving</h3>
+        <p> Interactive Lessons with quizzes and projects</p>
+      </div>
+
+      <div class="card">
+        <img src="certi.webp">
+        <h3>Certifications</h3>
+        <p>Certifications to boost your resume</p>
+      </div>
+
+  </section>
+
+ 
+  <section class="search" id="search">
+    <div class="search-content">
+      <center>
+        <h2>Find the perfect course for you!</h2>
+        <input type="text" name="search" id="search-co" placeholder="🔍 search here">
+
+     </center>
+    </div>
+  <center>
+    <div><h4><h3>Most Popular searched Courses!</h3></h4></div>
+    <div class="search-cards">
+    <div class="card">
+      <img src="python.avif">
+      <h4>Python Programming</h4>
+      <p><strong>Description:</strong>Master the basics of Python - perfect for beginners and essential for data science and web development.</p>
+      <a href="https://www.bing.com/aclk?ld=e83svn8zeqyhoWviX3rCFoGzVUCUx4C5WuYHiSYygU5hEQ3SCsvyg8OZfKwC4398LUpX2eqW3TTGFC9_1VUwt-24dj2vc0RwBPLgC2p8AleuO525SpTQjwP3AwfD4Ro_SbL1lmbhgiiueszI6OsdCRyZr8-qw31ZDoqJ2yx7ZovAG3PDGha9kgBHxDGydm_pi2aviy0g&u=aHR0cHMlM2ElMmYlMmZ3d3cudWRlbXkuY29tJTJmY291cnNlJTJmMTAwLWRheXMtb2YtY29kZSUyZiUzZnV0bV9zb3VyY2UlM2RiaW5nJTI2dXRtX21lZGl1bSUzZHVkZW15YWRzJTI2dXRtX2NhbXBhaWduJTNkQkctU2VhcmNoX0tleXdvcmRfQWxwaGFfUHJvZl9sYS5FTl9jYy5JbmRpYSUyNmNhbXBhaWdudHlwZSUzZFNlYXJjaCUyNnBvcnRmb2xpbyUzZEJpbmctSW5kaWElMjZsYW5ndWFnZSUzZEVOJTI2cHJvZHVjdCUzZENvdXJzZSUyNnRlc3QlM2QlMjZhdWRpZW5jZSUzZEtleXdvcmQlMjZ0b3BpYyUzZFB5dGhvbiUyNnByaW9yaXR5JTNkQWxwaGElMjZ1dG1fY29udGVudCUzZGRlYWw0NTg0JTI2dXRtX3Rlcm0lM2RfLl9hZ18xMzI3MTEyOTIzMTM2MDc3Xy5fYWRfXy5fa3dfcHl0aG9uXy5fZGVfY18uX2RtX18uX3BsX18uX3RpX2t3ZC04Mjk0NTc5NjQ5NjY4MSUzYWxvYy05MF8uX2xpXzE0NDA2Nl8uX3BkX18uXyUyNm1hdGNodHlwZSUzZGUlMjZtc2Nsa2lkJTNkNTVjZDM0MGM1NGYwMTllM2Q2MTQ1YzFlYjhjMWQ3ODA&rlid=55cd340c54f019e3d6145c1eb8c1d780" class="show-more-btn">Show more</a>
+    </div>
+
+    <div class="card">
+      <img src="web dev.avif">
+      <h4>Web Development</h4>
+      <p><strong>Description:</strong>Learn to build websites using HTML, CSS, JavaScript, and modern frameworks.</p>
+      <a href="https://www.bing.com/aclk?ld=e83svn8zeqyhoWviX3rCFoGzVUCUx4C5WuYHiSYygU5hEQ3SCsvyg8OZfKwC4398LUpX2eqW3TTGFC9_1VUwt-24dj2vc0RwBPLgC2p8AleuO525SpTQjwP3AwfD4Ro_SbL1lmbhgiiueszI6OsdCRyZr8-qw31ZDoqJ2yx7ZovAG3PDGha9kgBHxDGydm_pi2aviy0g&u=aHR0cHMlM2ElMmYlMmZ3d3cudWRlbXkuY29tJTJmY291cnNlJTJmMTAwLWRheXMtb2YtY29kZSUyZiUzZnV0bV9zb3VyY2UlM2RiaW5nJTI2dXRtX21lZGl1bSUzZHVkZW15YWRzJTI2dXRtX2NhbXBhaWduJTNkQkctU2VhcmNoX0tleXdvcmRfQWxwaGFfUHJvZl9sYS5FTl9jYy5JbmRpYSUyNmNhbXBhaWdudHlwZSUzZFNlYXJjaCUyNnBvcnRmb2xpbyUzZEJpbmctSW5kaWElMjZsYW5ndWFnZSUzZEVOJTI2cHJvZHVjdCUzZENvdXJzZSUyNnRlc3QlM2QlMjZhdWRpZW5jZSUzZEtleXdvcmQlMjZ0b3BpYyUzZFB5dGhvbiUyNnByaW9yaXR5JTNkQWxwaGElMjZ1dG1fY29udGVudCUzZGRlYWw0NTg0JTI2dXRtX3Rlcm0lM2RfLl9hZ18xMzI3MTEyOTIzMTM2MDc3Xy5fYWRfXy5fa3dfcHl0aG9uXy5fZGVfY18uX2RtX18uX3BsX18uX3RpX2t3ZC04Mjk0NTc5NjQ5NjY4MSUzYWxvYy05MF8uX2xpXzE0NDA2Nl8uX3BkX18uXyUyNm1hdGNodHlwZSUzZGUlMjZtc2Nsa2lkJTNkNTVjZDM0MGM1NGYwMTllM2Q2MTQ1YzFlYjhjMWQ3ODA&rlid=55cd340c54f019e3d6145c1eb8c1d780" class="show-more-btn">Show more</a>
+    </div>
+
+    <div class="card">
+      <img src="AI.avif">
+      <h4>Artificial intelligence</h4>
+      <p><strong>Description:</strong>Explore how machines learn, think, and make decisions through AI and machine learning courses.</p>
+      <a href="https://www.bing.com/aclk?ld=e83svn8zeqyhoWviX3rCFoGzVUCUx4C5WuYHiSYygU5hEQ3SCsvyg8OZfKwC4398LUpX2eqW3TTGFC9_1VUwt-24dj2vc0RwBPLgC2p8AleuO525SpTQjwP3AwfD4Ro_SbL1lmbhgiiueszI6OsdCRyZr8-qw31ZDoqJ2yx7ZovAG3PDGha9kgBHxDGydm_pi2aviy0g&u=aHR0cHMlM2ElMmYlMmZ3d3cudWRlbXkuY29tJTJmY291cnNlJTJmMTAwLWRheXMtb2YtY29kZSUyZiUzZnV0bV9zb3VyY2UlM2RiaW5nJTI2dXRtX21lZGl1bSUzZHVkZW15YWRzJTI2dXRtX2NhbXBhaWduJTNkQkctU2VhcmNoX0tleXdvcmRfQWxwaGFfUHJvZl9sYS5FTl9jYy5JbmRpYSUyNmNhbXBhaWdudHlwZSUzZFNlYXJjaCUyNnBvcnRmb2xpbyUzZEJpbmctSW5kaWElMjZsYW5ndWFnZSUzZEVOJTI2cHJvZHVjdCUzZENvdXJzZSUyNnRlc3QlM2QlMjZhdWRpZW5jZSUzZEtleXdvcmQlMjZ0b3BpYyUzZFB5dGhvbiUyNnByaW9yaXR5JTNkQWxwaGElMjZ1dG1fY29udGVudCUzZGRlYWw0NTg0JTI2dXRtX3Rlcm0lM2RfLl9hZ18xMzI3MTEyOTIzMTM2MDc3Xy5fYWRfXy5fa3dfcHl0aG9uXy5fZGVfY18uX2RtX18uX3BsX18uX3RpX2t3ZC04Mjk0NTc5NjQ5NjY4MSUzYWxvYy05MF8uX2xpXzE0NDA2Nl8uX3BkX18uXyUyNm1hdGNodHlwZSUzZGUlMjZtc2Nsa2lkJTNkNTVjZDM0MGM1NGYwMTllM2Q2MTQ1YzFlYjhjMWQ3ODA&rlid=55cd340c54f019e3d6145c1eb8c1d780" class="show-more-btn">Show more</a>
+    </div>
+ 
+  </center>
+</div>
+
+
+<section id="popular" class="popular">
+  <div class="internship-cards">
+  <center>
+    <div>
+      <h3>Most Popular searched Internship!</h3>
+    </div>
+
+    <div class="card">
+      <img src="web dev.avif">
+      <h4>Web Development Internship</h4>
+      <p><strong>Description:</strong>Gain hands-on experience in building websites using HTML, CSS, JavaScript, and modern frameworks.</p>
+      <a href="https://internshala.com/internships/python-internship" class="show-more-btn">Show more</a>
+    </div>
+
+    <div class="card">
+      <img src="graphic design.avif">
+      <h4>Graphic Design Internship</h4>
+      <p><strong>Description:</strong>Work on real-world projects using tools like Canva, Photoshop, or Figma to boost your creative skills.</p>
+      <a href="https://internshala.com/internships/python-internship" class="show-more-btn">Show more</a>
+    </div>
+
+    <div class="card">
+      <img src="data science.webp">
+      <h4>Data Science Internship</h4>
+      <p><strong>Description:</strong>Learn to analyze data, build models, and gain insights using Python, Excel, and machine learning tools.</p>
+      <a href="https://internshala.com/internships/python-internship" class="show-more-btn">Show more</a>
+    </div>
+  </div>
+</section>
+  </center>
+</section>
+
+<section class="contact">
+  <h1>Contact Us</h1>
+  <div class="contact-form">
+    <form action="#" method="post">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+
+  
+</section>
+
+<footer>
+  <p>&copy; 2025 LearnSphere. All rights reserved.</p>
+</footer>
+
+
+  
+</body>
+</html>
+
