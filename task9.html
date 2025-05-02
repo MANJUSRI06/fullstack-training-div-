@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        #name, #email, #phone{
+            font-weight: 10px;
+            font-weight: bold;
+        }
+       
+    </style>
+
+<body>
+    <center>
+        <form name="form" onsubmit="return validateForm()">
+            <h2>Registration Form!</h2>
+
+            Name: <input type="text" id="name"><br><br>
+            Email: <input type="email" id="email" oninput="checkEmail()"><br>
+            <div id="result"></div><br>
+            Password: <input type="password" id="pass"><br><br>
+            Phone Number: <input type="tel" id="phone" oninput="checkphone()"><br><br>
+            <div id="phoneres"></div><br>
+
+            <button type="submit">Submit</button>
+        </form>
+    </center>
+
+    <script>
+
+function validateForm() {
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const pass = document.getElementById("pass").value;
+
+            if (name == "" || email =="" || pass == "") {
+                alert("Please fill out all the fields!");
+                return false;
+            }
+
+           else{
+
+            alert("Registration Successful!");
+            return true;
+        }
+    }
+
+        function checkEmail() {
+            const email = document.getElementById("email").value;
+            const resultDiv = document.getElementById("result");
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (emailRegex.test(email)) {
+                resultDiv.innerHTML = "Valid email address.";
+                resultDiv.style.color = "green";
+                return true;
+            } 
+            
+            else {
+                resultDiv.innerHTML = "Invalid email address.";
+                resultDiv.style.color = "red";
+                return false;
+            }
+        }
+
+        function checkphone(){
+            const phone = document.getElementById("phone").value;
+            const phoneres = document.getElementById("phoneres");
+            const phregex = /^\d{10}$/;
+
+            if(phregex.test(phone)){
+                phoneres.innerHTML = "Valid Phone Number.";
+                phoneres.style.color = "green";
+                return true;
+            }
+            else{
+                phoneres.innerHTML = "InValid Phone Number.";
+                phoneres.style.color = "red";
+                return false;
+            }
+
+        }
+    </script>
+</body>
+</html>
